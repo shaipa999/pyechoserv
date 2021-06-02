@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pyechoservshay
+  labels:
+    app: pyechoservshay
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pyechoservshay
+  template:
+    metadata:
+      labels:
+        app: pyechoservshay
+    spec:
+      containers:
+      - image: pyechoservshay:latest
+        imagePullPolicy: IfNotPresent
+        name: pyechoservshay
+        ports:
+        - containerPort: 80
+          protocol: TCP

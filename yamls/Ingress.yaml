@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pyechoservshay-ingress
+spec:
+  rules:
+  - host: pyechoservshay-ingress.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: pyechoservshay-internal-service
+            port:
+              number: 80
