@@ -21,7 +21,7 @@ kubectl apply -f ./Service.yaml
 kubectl apply -f ./Ingress.yaml
 ```
 
-Access the site:
+Access the website:
 We need to get the cluster Ip of the minikube
 ```
 minikube ip
